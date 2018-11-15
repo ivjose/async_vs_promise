@@ -34,11 +34,13 @@ class SampleAsync extends Component {
   startGame = async () => {
     let currentScore = 5;
     console.log("Game Started Async! Current score is " + currentScore);
-    await Promise.all([
+    let response = await Promise.all([
       this.levelOne(currentScore),
       this.levelTwo(currentScore),
       this.levelThree(currentScore)
     ]);
+
+
   };
 
   render() {
